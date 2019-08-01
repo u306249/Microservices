@@ -10,6 +10,7 @@ public class PairSolution {
 
     // Complete the pairs function below.
     static int pairs(int k, int[] arr) {
+		
     	int count = 0;
 		int complementarr[] = Arrays.stream(arr).map(x -> k + x).toArray();
 		Set<Integer> set = new HashSet<>();
@@ -22,6 +23,7 @@ public class PairSolution {
 				count++;
 			}
 		}
+		
 		return count;
 	}
 
