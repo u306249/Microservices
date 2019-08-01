@@ -5176,3 +5176,7 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.springfra
 2019-07-29 10:29:14,595 [Worker-102: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2019-07-29 10:29:14,595 [Worker-102: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gosardar\Documents\workspace-spring-tool-suite-4-4.3.0.RELEASE\votingsystem\src\test\resources
 2019-08-01 11:55:41,905 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-08-01 12:23:25,687 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-08-01 12:23:25,688 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gosardar\Documents\workspace-spring-tool-suite-4-4.3.0.RELEASE\votingsystem\src\main\resources
+2019-08-01 12:23:25,691 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-08-01 12:23:25,692 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\gosardar\Documents\workspace-spring-tool-suite-4-4.3.0.RELEASE\votingsystem\src\test\resources
