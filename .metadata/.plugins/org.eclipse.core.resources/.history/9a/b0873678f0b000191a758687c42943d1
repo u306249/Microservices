@@ -1,0 +1,60 @@
+package com.motion.vote;
+
+import java.util.HashSet;
+import java.util.Set;
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class MotionTask {
+
+	private Set<String> voters = new HashSet<String>();
+	private String motionName = "";
+	private int forVote = 0;
+	private Vote vpVote = null;
+	
+	private static long timeout = 5;//timer is set to 15 mnts
+	private static boolean motionCloseSignal = false;
+	
+	private int againstVote = 0;
+	
+	public void initiateMotion() {
+		Timer timer = new Timer();
+		timer.schedule(new ShowResult(), timeout * 1000);	
+	}
+	public MotionTask(String motionName) {
+		this.motionName = motionName;
+	}
+	public void castVote(Vote vote) {
+		if(!voters.contains(vote.getVoterName()) && !vote.isVP()&&!motionCloseSignal) {
+			if(vote.getOpinion() == Opinion.Y) {
+				forVote++;
+			}else if(vote.getOpinion() == Opinion.N) {
+				againstVote++;
+			}
+		}else {
+			if(vote.isVP()) {
+				vpVote = vote;
+			}
+		}
+	}
+	public void publishResults() {
+		System.out.println("Motion Name : "+motionName);
+		System.out.println("No of votes for : "+forVote);
+		System.out.println("No of votes against : "+againstVote);
+	}
+	public int getForVote() {
+		return forVote;
+	}
+	public int getAgainstVote() {
+		return againstVote;
+	}
+	public Vote getVpVote() {
+		return vpVote;
+	}
+	class ShowResult extends TimerTask {
+		public void run() {
+			motionCloseSignal = true;
+		}
+	}
+}
+

@@ -1,0 +1,34 @@
+package com.motion.vote;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class MotionTask {
+
+	private Map<String,Integer> results = new HashMap<String,Integer>();
+	public void process(String input,Scanner scanner) {
+
+		char operation = input.charAt(0);
+
+		switch (operation) {
+			case '1': // Cast vote
+				System.out.println("Enter your(voter) name : ");
+				String voter = scanner.next();
+				System.out.println("Enter your vote(Y/N) : ");
+				String vote = scanner.next();
+				break;
+			case '2': // Query Results
+				
+				break;
+			case '3': // Exit
+				
+				break;
+			default :
+				System.out.println("Invalid Option.");
+			
+		} 
+
+	}
+
+}

@@ -1,0 +1,66 @@
+package com.hacker.rank.strng;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+
+public class StringValiditySolution {
+
+	// Complete the isValid function below.
+	static String isValid(String s) {
+
+		Map<Character, Integer> charMap = new HashMap<>();
+		int length = s.length();
+		for (int i = 0; i < length; i++) {
+			char c = s.charAt(i);
+			if (charMap.containsKey(c)) {
+				int value = charMap.get(c).intValue();
+				charMap.put(c, ++value);
+			} else {
+				charMap.put(c, 1);
+			}
+		}
+		System.out.println(charMap);
+		Collection<Integer> values = charMap.values();
+		List<Integer> cintList = new ArrayList<>();
+
+		cintList.addAll(values);
+		Collections.sort(cintList);
+		int len = cintList.size();
+		int diff = 0;
+		int deflection = 0;
+
+		for (int i = 0; i < len - 1; i++) {
+			diff = cintList.get(i + 1) - cintList.get(i);
+			if (diff > 1) {
+				return "NO";
+			}
+		}
+		return "YES";
+	}
+
+	private static final Scanner scanner = new Scanner(System.in);
+
+	public static void main(String[] args) throws IOException {
+		// BufferedWriter bufferedWriter = new BufferedWriter(new
+		// FileWriter(System.getenv("OUTPUT_PATH")));
+
+		String s = scanner.nextLine();
+
+		String result = isValid(s);
+		System.out.println("Result = " + result);
+
+		/*
+		 * bufferedWriter.write(result); bufferedWriter.newLine();
+		 * 
+		 * bufferedWriter.close();
+		 */
+
+		scanner.close();
+	}
+}

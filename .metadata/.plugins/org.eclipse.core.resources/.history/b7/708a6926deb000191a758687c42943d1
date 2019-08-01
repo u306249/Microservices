@@ -1,0 +1,7 @@
+package com.motion.vote;
+
+public class MotionResults {
+	private int forVote = 0;
+	private int againstVote = 0;
+	private boolean isMotionPassed = false;
+}

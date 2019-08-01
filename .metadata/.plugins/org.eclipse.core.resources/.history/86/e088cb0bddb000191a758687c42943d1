@@ -1,0 +1,24 @@
+package com.motion.vote;
+
+public class Vote {
+	
+	private String voterName;
+	private Opinion opinion;
+	private boolean isVP = false;
+
+	public String getVoterName() {
+		return voterName;
+	}
+
+	public void setVoterName(String voterName) {
+		this.voterName = voterName;
+	}
+
+	public Opinion getOpinion() {
+		return opinion;
+	}
+
+	public void setOpinion(Opinion opinion) {
+		this.opinion = opinion;
+	}
+}

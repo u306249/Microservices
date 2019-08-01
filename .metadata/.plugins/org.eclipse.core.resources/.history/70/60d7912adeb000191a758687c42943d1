@@ -1,0 +1,31 @@
+package com.motion.vote;
+
+public class MotionResults {
+	private int forVote = 0;
+	private int againstVote = 0;
+	private boolean isMotionPassed = false;
+
+	public int getForVote() {
+		return forVote;
+	}
+
+	public void setForVote(int forVote) {
+		this.forVote = forVote;
+	}
+
+	public int getAgainstVote() {
+		return againstVote;
+	}
+
+	public void setAgainstVote(int againstVote) {
+		this.againstVote = againstVote;
+	}
+
+	public boolean isMotionPassed() {
+		return isMotionPassed;
+	}
+
+	public void setMotionPassed(boolean isMotionPassed) {
+		this.isMotionPassed = isMotionPassed;
+	}
+}

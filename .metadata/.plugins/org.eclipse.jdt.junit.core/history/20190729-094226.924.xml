@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="MotionQueryTest" project="votingsystem" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.vote.votingsystem.MotionQueryTest" time="0.001">
+    <testcase name="testMotionPassQuery" classname="com.vote.votingsystem.MotionQueryTest" time="0.0"/>
+    <testcase name="testMotionFailQuery" classname="com.vote.votingsystem.MotionQueryTest" time="0.001"/>
+  </testsuite>
+</testrun>

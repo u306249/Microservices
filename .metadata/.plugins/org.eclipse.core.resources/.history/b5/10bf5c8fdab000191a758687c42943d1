@@ -1,0 +1,13 @@
+package com.motion.vote;
+
+
+public class Vote {
+	private String voterName;
+	private Opinion opinion;
+	
+	private enum Opinion{
+		Y,N
+	}
+	
+}
+

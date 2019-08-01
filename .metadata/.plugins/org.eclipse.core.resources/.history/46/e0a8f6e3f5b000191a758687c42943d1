@@ -1,0 +1,13 @@
+package com.vote.votingsystem;
+
+
+@RunWith(Suite.class)
+
+@Suite.SuiteClasses({
+   TestJunit1.class,
+   TestJunit2.class
+})
+
+public class AllTests {
+
+}

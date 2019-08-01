@@ -1,0 +1,12 @@
+public class Palindrome {
+    public static boolean isPalindrome(String word) {
+        
+    	word = word.toLowerCase();
+    	StringBuilder sb = new StringBuilder(word);
+    	String revStr = sb.reverse().toString();
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(Palindrome.isPalindrome("Deleveled"));
+    }
+}

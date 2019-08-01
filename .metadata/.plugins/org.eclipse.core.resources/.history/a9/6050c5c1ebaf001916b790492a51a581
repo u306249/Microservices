@@ -1,0 +1,54 @@
+package com.hacker.rank.warmup;
+
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+
+public class RepeatedStringSoln {
+
+    // Complete the repeatedString function below.
+    static long repeatedString(String s, long n) {
+    	
+    	long strLen = s.length();
+    	long freq = 0;
+    	
+    	if(n>strLen) {
+    		String prefix = String.valueOf(s.charAt(0));
+    		List strList = Arrays.asList(s.toCharArray());
+    		freq = Collections.frequency(strList, prefix);
+    	}else {
+    		long mul = n/strLen;
+    		long rem = n%strLen;
+    		
+    		String prefix = String.valueOf(s.charAt(0));
+    		String subSTr = s.substring(0,(int)rem);
+    		List strList = Arrays.asList(s.toCharArray());
+    		List strSubList = Arrays.asList(subSTr.toCharArray());
+    		
+    		freq = Collections.frequency(strList, prefix)*mul + Collections.frequency(strSubList, prefix);
+    	}
+    	return freq;
+    }
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) throws IOException {
+        //BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        String s = scanner.nextLine();
+
+        long n = scanner.nextLong();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        long result = repeatedString(s, n);
+        System.out.println(result);
+        //bufferedWriter.write(String.valueOf(result));
+        //bufferedWriter.newLine();
+
+        //bufferedWriter.close();
+
+        scanner.close();
+    }
+}

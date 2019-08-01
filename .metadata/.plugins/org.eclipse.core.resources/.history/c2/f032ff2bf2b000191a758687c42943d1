@@ -1,0 +1,25 @@
+package com.vote.votingsystem;
+
+import com.motion.vote.MotionTask;
+
+import junit.framework.TestCase;
+
+/**
+ * Unit test for simple App.
+ */
+public class MotionPassTest extends TestCase{
+	
+	private MotionTask task = new MotionTask();
+    
+    public MotionPassTest( String testName ){
+        super( testName );
+    }
+    public void init() {
+    	task.initiateMotion();
+    }
+    public void testMotionPass(){
+        
+    	
+    	assertEquals(null, null);
+    }
+}

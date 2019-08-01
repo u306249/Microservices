@@ -1,0 +1,24 @@
+package com.motion.vote;
+
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class StartMotion {
+
+	private static long timeout = 5;
+
+	public static void main(String[] args) {
+		Timer timer = new Timer();
+		timer.schedule(new ShowResult(), timeout * 1000);
+		
+		
+	}
+
+	static class ShowResult extends TimerTask {
+		public void run() {
+			System.out.println("Shutdown signal is initiated......");
+			System.exit(1);
+		}
+	}
+
+}

@@ -1,0 +1,79 @@
+package com.motion.vote;
+
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class MotionTask {
+
+	private Set<String> voters = new HashSet<String>();
+	private String motionName = "";
+	private int forVote = 0;
+	
+	private static long timeout = 5;//timer is set to 15 mnts
+	private static boolean motionCloseSignal = false;
+	
+	private int againstVote = 0;
+	
+	public void initiateMotion() {
+		Timer timer = new Timer();
+		timer.schedule(new ShowResult(), timeout * 1000);
+		
+	}
+	
+	public MotionTask(String motionName) {
+		this.motionName = motionName;
+	}
+	public MotionStatus process(String input,Scanner scanner) {
+
+		char operation = input.charAt(0);
+		MotionStatus status = MotionStatus.MOTIONOPEN;
+
+		switch (operation) {
+			case '1': // Cast vote
+				System.out.println("Enter your(voter) name : ");
+				String voter = scanner.next();
+				System.out.println("Enter your vote(Y/N) : ");
+				String vote = scanner.next();
+
+				if(!voters.contains(voter)) {//If a voter votes multiple time that would be still counted as one vote
+					if(vote.equalsIgnoreCase("Y")) {
+						forVote++;
+					}else if(vote.equalsIgnoreCase("N")) {
+						againstVote++;
+					}
+				}
+				if((againstVote+forVote)==101) { //If total number of votes reaches 101, Motion will be closed
+					status = MotionStatus.MOTIONCLOSED;
+				}
+				System.out.println("Your vote is casted, thank you.");
+				break;
+			case '2': // Query Results
+				publishResults();
+				break;
+			default :
+				System.out.println("Invalid Option.");
+		} 
+		return status;
+
+	}
+	public void publishResults() {
+		System.out.println("Motion Name : "+motionName);
+		System.out.println("No of votes for : "+forVote);
+		System.out.println("No of votes against : "+againstVote);
+	}
+	public int getForVote() {
+		return forVote;
+	}
+	public int getAgainstVote() {
+		return againstVote;
+	}
+	
+}
+class ShowResult extends TimerTask {
+	public void run() {
+		//motionCloseSignal = true;
+	}
+}

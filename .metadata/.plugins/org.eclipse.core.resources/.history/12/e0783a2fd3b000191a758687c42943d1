@@ -1,0 +1,6 @@
+package com.motion.vote;
+
+public enum MotionStatus {
+
+	MOTIONCLOSED,MOTIONOPEN,MOTIONPASSED,MOTIONFAILED,MOTIONTIED
+}

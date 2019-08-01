@@ -1,0 +1,62 @@
+package com.hacker.rank.strng;
+
+import java.io.IOException;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class CommonChildSolution {
+
+    // Complete the commonChild function below.
+    static int commonChild(String s1, String s2) {
+
+    	int len1 = s1.length();
+    	int len2 = s2.length();
+    	
+    	String comAlphabelts1 = "";
+    	String comAlphabelts2 = "";
+    	
+    	Set<String> s1Common = new HashSet<>();
+    	
+    	for(int i=0;i<len1;i++) {
+    		if(s2.contains(s1.charAt(i)+"")) {
+    			comAlphabelts1 = comAlphabelts1 + s1.charAt(i);
+    		}
+    	}
+    	for(int i=0;i<len2;i++) {
+    		if(s1.contains(s2.charAt(i)+"")) {
+    			comAlphabelts2 = comAlphabelts2 + s2.charAt(i);
+    		}
+    	}
+    	for(int i=0;i<comAlphabelts1.length();i++) {
+    		
+    		
+    	}
+    	
+    	
+    	
+    	
+    	return 0;
+    }
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) throws IOException {
+        //BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        String s1 = scanner.nextLine();
+
+        String s2 = scanner.nextLine();
+
+        int result = commonChild(s1, s2);
+        
+        System.out.println(result);
+
+        //bufferedWriter.write(String.valueOf(result));
+        //bufferedWriter.newLine();
+
+        //bufferedWriter.close();
+
+        scanner.close();
+    }
+}

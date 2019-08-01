@@ -1,0 +1,109 @@
+!SESSION 2019-08-01 11:55:06.952 -----------------------------------------------
+eclipse.buildId=4.3.0.201906200901-RELEASE
+java.version=1.8.0_191
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+This is a continuation of log file C:\Users\gosardar\Documents\workspace-spring-tool-suite-4-4.3.0.RELEASE\.metadata\.bak_0.log
+Created Time: 2019-08-01 11:55:53.643
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.645
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.683
+!MESSAGE classpath=81 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.686
+!MESSAGE buffering callback sts4.classpath.vTtEqnmJ hateoas false 81
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.691
+!MESSAGE Preparing classpath changed notification inventoryms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.694
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.719
+!MESSAGE classpath=74 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.726
+!MESSAGE buffering callback sts4.classpath.vTtEqnmJ inventoryms false 74
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.728
+!MESSAGE Preparing classpath changed notification kafkastreams
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.730
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.747
+!MESSAGE classpath=53 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.749
+!MESSAGE buffering callback sts4.classpath.vTtEqnmJ kafkastreams false 53
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.751
+!MESSAGE Preparing classpath changed notification mockito
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.759
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.779
+!MESSAGE classpath=85 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.781
+!MESSAGE buffering callback sts4.classpath.vTtEqnmJ mockito false 85
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.783
+!MESSAGE Preparing classpath changed notification orderms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.785
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.898
+!MESSAGE classpath=164 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.909
+!MESSAGE buffering callback sts4.classpath.vTtEqnmJ orderms false 164
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.912
+!MESSAGE Preparing classpath changed notification paymentms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.914
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.931
+!MESSAGE classpath=74 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.934
+!MESSAGE buffering callback sts4.classpath.vTtEqnmJ paymentms false 74
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.936
+!MESSAGE Preparing classpath changed notification tweeterproducer
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.942
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.948
+!MESSAGE classpath=32 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.962
+!MESSAGE buffering callback sts4.classpath.vTtEqnmJ tweeterproducer false 32
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.965
+!MESSAGE Preparing classpath changed notification userms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:53.967
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:54.064
+!MESSAGE classpath=185 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:54.066
+!MESSAGE buffering callback sts4.classpath.vTtEqnmJ userms false 185
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:54.068
+!MESSAGE executing callback sts4.classpath.vTtEqnmJ 15 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-01 11:55:54.346
+!MESSAGE executing callback sts4.classpath.vTtEqnmJ SUCCESS [done]

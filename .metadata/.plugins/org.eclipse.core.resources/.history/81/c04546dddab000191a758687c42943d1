@@ -1,0 +1,64 @@
+package com.motion.vote;
+
+import java.util.Scanner;
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class StartMotion {
+
+	private static long timeout = 5;//timer is set to 15 mnts
+	private static final Scanner scanner = new Scanner(System.in);
+	private static boolean motionCloseSignal = false;
+	
+	public void initiateMotion() {
+		Timer timer = new Timer();
+		timer.schedule(new ShowResult(), timeout * 1000);
+		MotionTask motionTask = new MotionTask(t);
+	}
+
+	public static void castVote() {
+		
+		System.out.println("Please enter Motion name : ");
+		String t = scanner.next();
+		System.out.println("Motion : "+t+" has started, please cast your vote");
+		
+		
+		MotionStatus motionStatus = MotionStatus.MOTIONOPEN;
+		
+		while ((motionStatus == MotionStatus.MOTIONOPEN) && (motionCloseSignal == false)) {
+			System.out.println("Please choose the options from below : ");
+			System.out.println("1.Cast vote, enter 1 : ");
+			System.out.println("2.Query results, enter 2 : "  );
+			System.out.println("3.Exit Motion, enter 3 : ");
+			String option = scanner.next();
+	
+			motionStatus = motionTask.process(option, scanner);	
+		}
+		int forVote = motionTask.getForVote();
+		int againstVote = motionTask.getAgainstVote();
+		
+		if(forVote == againstVote) {
+			System.out.println("Motion is tied, results will be determined base on VP's vote");
+			System.out.println("Mr. VP, please cast your vote, type 'Q' in case VP is not available");
+			String vpVote = scanner.next();
+			if(vpVote.equals("Y")) {
+				motionTask.publishResults();
+				System.out.println("Motion is Passed,congratulations");
+			}else{
+				motionTask.publishResults();
+				System.out.println("Motion is failed");
+			}
+		}else if(forVote>againstVote) {
+			System.out.println("Motion is Passed,congratulations");
+		}else {
+			System.out.println("Motion is failed");
+		}
+	}
+
+	static class ShowResult extends TimerTask {
+		public void run() {
+			motionCloseSignal = true;
+		}
+	}
+
+}

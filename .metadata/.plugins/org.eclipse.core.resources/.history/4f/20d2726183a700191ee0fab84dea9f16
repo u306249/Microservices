@@ -1,0 +1,53 @@
+package com.hacker.rank.stack;
+
+import java.util.Scanner;
+import java.util.Stack;
+
+public class Solution {
+	public static void main(String[] args) {
+		MyQueue<Integer> queue = new MyQueue<Integer>();
+
+		Scanner scan = new Scanner(System.in);
+		int n = scan.nextInt();
+
+		for (int i = 0; i < n; i++) {
+			int operation = scan.nextInt();
+			if (operation == 1) { // enqueue
+				queue.enqueue(scan.nextInt());
+			} else if (operation == 2) { // dequeue
+				queue.dequeue();
+			} else if (operation == 3) { // print/peek
+				System.out.println(queue.peek());
+			}
+		}
+		scan.close();
+	}
+
+	static class MyQueue<Integer> {
+		
+		Stack<Integer> newStack = new Stack<Integer>();
+		Stack<Integer> oldState = new Stack<Integer>();
+		
+		public void enqueue(Integer t) {
+			newStack.add(t);	
+			populateStackReverse(newStack,oldState);
+		}
+		public void populateStackReverse(Stack<Integer> stack1,Stack<Integer> stack2) {
+			Object[] elements = stack1.toArray();
+			stack2.clear();
+			int length = elements.length;
+			for(int i = length-1;i>=0;i--) {				 
+				stack2.add((Integer)elements[i]);				
+			}
+		}
+		public void dequeue() {
+			oldState.pop();
+			populateStackReverse(oldState,newStack);
+			
+		}
+		public Integer peek() {
+			Integer peeked = oldState.peek();			
+			return peeked;
+		}
+	}
+}

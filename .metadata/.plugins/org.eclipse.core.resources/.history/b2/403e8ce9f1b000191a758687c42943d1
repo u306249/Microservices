@@ -1,0 +1,23 @@
+package com.vote.votingsystem;
+
+import junit.framework.TestCase;
+
+/**
+ * Unit test for simple App.
+ */
+public class MotionPassTest extends TestCase{
+    /**
+     * Create the test case
+     *
+     * @param testName name of the test case
+     */
+    public MotionPassTest( String testName ){
+        super( testName );
+    }
+    /**
+     * Rigourous Test :-)
+     */
+    public void testMotionPass(){
+        assertTrue( true );
+    }
+}

@@ -1,0 +1,48 @@
+package com.motion.vote;
+
+import java.util.Scanner;
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class StartMotion {
+
+	private static long timeout = 5;//timer is set to 15 mnts
+	private static final Scanner scanner = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		
+		System.out.println("Please enter Motion name : ");
+		String t = scanner.next();
+		System.out.println("Motion : "+t+" has started, please cast your vote");
+		
+		Timer timer = new Timer();
+		timer.schedule(new ShowResult(), timeout * 1000);
+		MotionTask motionTask = new MotionTask(t);
+		
+		MotionStatus motionStatus = MotionStatus.MOTIONOPEN;
+		
+		while (motionStatus == MotionStatus.MOTIONOPEN) {
+			System.out.println("Please choose the options from below : ");
+			System.out.println("1.Cast vote, enter 1 : ");
+			System.out.println("2.Query results, enter 2 : "  );
+			System.out.println("3.Exit Motion, enter 3 : ");
+			String option = scanner.next();
+	
+			motionStatus = motionTask.process(option, scanner);
+		}
+		
+		String result = motionTask.getMotionPassed();
+		
+		
+		
+		
+	}
+
+	static class ShowResult extends TimerTask {
+		public void run() {
+			System.out.println("Shutdown signal is initiated......");
+			System.exit(1);
+		}
+	}
+
+}

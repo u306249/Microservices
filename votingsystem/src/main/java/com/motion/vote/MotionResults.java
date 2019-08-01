@@ -1,0 +1,50 @@
+package com.motion.vote;
+
+import java.util.Date;
+
+public class MotionResults {
+	
+	private int forVote = 0;
+	private int againstVote = 0;
+	private boolean isMotionPassed = false;
+	private MotionStatus motionStatus = MotionStatus.MOTIONNOTSTARTED;
+	private Date motionStartTime = null;
+	private Date motionEndTime = null;
+	
+	public Date getMotionStartTime() {
+		return motionStartTime;
+	}
+	public void setMotionStartTime(Date motionStartTime) {
+		this.motionStartTime = motionStartTime;
+	}
+	public Date getMotionEndTime() {
+		return motionEndTime;
+	}
+	public void setMotionEndTime(Date motionEndTime) {
+		this.motionEndTime = motionEndTime;
+	}
+	public MotionStatus getMotionStatus() {
+		return motionStatus;
+	}
+	public void setMotionStatus(MotionStatus motionStatus) {
+		this.motionStatus = motionStatus;
+	}
+	public int getForVote() {
+		return forVote;
+	}
+	public void setForVote(int forVote) {
+		this.forVote = forVote;
+	}
+	public int getAgainstVote() {
+		return againstVote;
+	}
+	public void setAgainstVote(int againstVote) {
+		this.againstVote = againstVote;
+	}
+	public boolean isMotionPassed() {
+		return isMotionPassed;
+	}
+	public void setMotionPassed(boolean isMotionPassed) {
+		this.isMotionPassed = isMotionPassed;
+	}
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AllTests" project="votingsystem" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="com.vote.votingsystem.AllTests" time="0.0">
+    <testsuite name="com.vote.votingsystem.MotionQueryPassFailTest" time="0.0">
+      <testcase name="testMotionPassTieVPPresent" classname="com.vote.votingsystem.MotionQueryPassFailTest" time="0.0"/>
+      <testcase name="testMotionFail" classname="com.vote.votingsystem.MotionQueryPassFailTest" time="0.0"/>
+      <testcase name="testMotionPass" classname="com.vote.votingsystem.MotionQueryPassFailTest" time="0.0"/>
+      <testcase name="testMotionPassTieVPAbsent" classname="com.vote.votingsystem.MotionQueryPassFailTest" time="0.0"/>
+    </testsuite>
+    <testsuite name="com.vote.votingsystem.MotionVoteWithoutStart" time="0.0">
+      <testcase name="testMotionWithoutStarted" classname="com.vote.votingsystem.MotionVoteWithoutStart" time="0.0"/>
+    </testsuite>
+  </testsuite>
+</testrun>

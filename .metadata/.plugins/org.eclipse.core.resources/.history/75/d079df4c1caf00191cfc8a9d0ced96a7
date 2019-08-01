@@ -1,0 +1,17 @@
+package com.thread.utility;
+
+public class CountDownLatch {
+
+	public static void main(String[] args) {
+		
+
+	}
+	class DependentService implements Runnable{
+
+		@Override
+		public void run() {
+			
+			
+		}
+	}
+}

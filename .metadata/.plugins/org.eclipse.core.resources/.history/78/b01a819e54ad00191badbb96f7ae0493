@@ -1,0 +1,58 @@
+package com.hacker.rank.stack;
+
+import java.io.IOException;
+import java.util.Scanner;
+import java.util.Stack;
+
+public class BalancedBracketsSolution {
+
+    // Complete the isBalanced function below.
+    static String isBalanced(String s) {
+    	String ret = null;
+    	Stack<Character> stack = new Stack<>();    	
+    	char[] chars = s.toCharArray();    	
+    	for(char c : chars) {
+    		if(c=='('||c=='['||c=='{') {
+    			stack.push(c);
+    		}else {
+    			if(stack.empty()) {
+    				ret = "NO";
+    				break;
+    			}
+    			char c1 = stack.pop();    			
+    			if((c1=='('&&c==')')||(c1=='['&&c==']')||(c1=='{'&&c=='}')) {
+    				if(stack.empty()) {
+    					ret = "YES";
+    				}
+    			} else {
+    				ret = "NO";    			
+    				break;
+    			}
+    		}
+    	}    	
+    	return ret;
+    }
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) throws IOException {
+        //BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        int t = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        for (int tItr = 0; tItr < t; tItr++) {
+            String s = scanner.nextLine();
+
+            String result = isBalanced(s);
+            System.out.println(result);
+            //bufferedWriter.write(result);
+            //bufferedWriter.newLine();
+        }
+
+        //bufferedWriter.close();
+
+        scanner.close();
+    }
+}
+

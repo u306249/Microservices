@@ -1,0 +1,21 @@
+package com.thread.utility;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class CountDownLatch {
+
+	public static void main(String[] args) {
+		
+		ExecutorService servicve = Executors.newFixedThreadPool(4);
+
+	}
+	class DependentService implements Runnable{
+
+		@Override
+		public void run() {
+			
+			
+		}
+	}
+}

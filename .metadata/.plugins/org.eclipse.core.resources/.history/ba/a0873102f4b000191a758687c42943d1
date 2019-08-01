@@ -1,0 +1,87 @@
+package com.vote.votingsystem;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import com.motion.vote.MotionResults;
+import com.motion.vote.MotionTask;
+import com.motion.vote.Opinion;
+import com.motion.vote.Vote;
+
+import junit.framework.TestCase;
+
+/**
+ * Unit test for simple App.
+ */
+public class MotionPassTest {
+	
+	private MotionTask task = null;
+    
+    @Before
+    public void init() {
+    	System.out.println("TestCase Initiated............");
+    	task = new MotionTask();
+    	task.initiateMotion();
+    }
+    @Test
+    public void testMotionPass(){
+        
+    	Vote vote1 = new Vote("Anny",Opinion.Y,false);
+    	Vote vote2 = new Vote("Jenny",Opinion.N,false);
+    	Vote vote3 = new Vote("Minnie",Opinion.Y,false);
+    	Vote vote4 = new Vote("Simi",Opinion.Y,false);
+    	Vote vote5 = new Vote("Renie",Opinion.Y,false);
+    	Vote vote6 = new Vote("Benie",Opinion.Y,false);
+    	Vote vote7 = new Vote("Amy",Opinion.Y,false);
+    	Vote vote8 = new Vote("Demmy",Opinion.N,false);
+    	Vote vote9 = new Vote("Geby",Opinion.Y,false);
+    	
+    	task.castVote(vote1);
+    	task.castVote(vote2);
+    	task.castVote(vote3);
+    	task.castVote(vote4);
+    	task.castVote(vote5);
+    	task.castVote(vote6);
+    	task.castVote(vote7);
+    	task.castVote(vote8);
+    	task.castVote(vote9);
+    	
+    	MotionResults result = task.getResult();
+    	
+    	TestCase.assertEquals(result.isMotionPassed(), true);
+    }
+    @After
+    public void cleanup() {
+    	System.out.println("TestCase Cleanedup............");
+    	task = null;
+    }
+    @Test
+    public void testMotionFail(){
+        
+    	Vote vote1 = new Vote("Anny",Opinion.Y,false);
+    	Vote vote2 = new Vote("Jenny",Opinion.N,false);
+    	Vote vote3 = new Vote("Minnie",Opinion.Y,false);
+    	Vote vote4 = new Vote("Simi",Opinion.N,false);
+    	Vote vote5 = new Vote("Renie",Opinion.N,false);
+    	Vote vote6 = new Vote("Benie",Opinion.N,false);
+    	Vote vote7 = new Vote("Amy",Opinion.Y,false);
+    	Vote vote8 = new Vote("Demmy",Opinion.N,false);
+    	Vote vote9 = new Vote("Geby",Opinion.N,false);
+    	
+    	task.castVote(vote1);
+    	task.castVote(vote2);
+    	task.castVote(vote3);
+    	task.castVote(vote4);
+    	task.castVote(vote5);
+    	task.castVote(vote6);
+    	task.castVote(vote7);
+    	task.castVote(vote8);
+    	task.castVote(vote9);
+    	
+    	MotionResults result = task.getResult();
+    	
+    	TestCase.assertEquals(result.isMotionPassed(), false);
+    }
+    
+}
